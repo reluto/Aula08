@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Http Angular</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body ng-app="app">
+	
+	<div ng-controller="FormCtrl">
+		<form >
+			<input type="text" ng-model="user.name">
+			<input type="submit" ng-click="search(user)" class="btn btn-sm  btn-primary">
+
+			
+		</form>
+	</div>
+	<div ng-controller="ResultCtrl" id="result">
+		<ul>
+			<li ng-repeat="aluno in alunos" >{{aluno.name}} - {{aluno.profissao}}</li>
+		</ul>
+	</div>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="app.js"> </script>
+
+</body>
+</html>
